@@ -1,0 +1,1466 @@
+commit dec13305ca557a51497b103bd6dd90854531c018
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Tue Mar 8 10:46:54 2016 -0800
+
+    HBASE-15113 Procedure v2 - Speedup eviction of sys operation results
+    
+    Reason: Improvement
+    Author: Matteo Bertozzi
+    Ref: CDH-38138
+    
+    Change-Id: I8a1b59326d07d6723ccfb012bdfc1b21e490c134
+
+commit e4ce6633e29cb481600bc18e60428d749124e0bb
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Tue Mar 8 11:07:33 2016 -0800
+
+    HBASE-15422 Procedure v2 - Avoid double yield
+    
+    Reason: Bug
+    Author: Matteo Bertozzi
+    Ref: CDH-38138
+    
+    Change-Id: Icea9c2b812b47f9943c34f6965139de2e84263a0
+
+commit 51ab802857a5d97a7a3cbb5b1c2e336df990659b
+Author: Stephen Yuan Jiang <syuanjiangdev@gmail.com>
+Date:   Mon Mar 7 20:28:45 2016 -0800
+
+    HBASE-15413 Procedure-V2: print out ProcedureInfo during trace
+    
+    Reason: Debuggability
+    Author: Stephen Yuan Jiang
+    Ref: CDH-38138
+    
+    Change-Id: I30fd3b87699167df7ebe7313ccb5df1824a029c5
+
+commit f6fbbb0247345817689136cd79140ed02040de44
+Author: Samir Ahmic <samir@personal.com>
+Date:   Wed Feb 24 16:05:24 2016 +0100
+
+    HBASE-15144 Procedure v2 - Web UI displaying Store state
+    
+    Change-Id: Ia0ecc9e6a28406a41767b77880363a5b8cc3eb09
+
+commit 4f05b80bd2db53d3e918b993dd4bd360519ef039
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Thu Jan 28 10:13:42 2016 -0800
+
+    HBASE-15142 Procedure v2 - Basic WebUI listing the procedures
+    
+    Change-Id: Ied30f5c5186f13b71a289986dd4c96133ead4877
+
+commit 0e7306e8583ec3f929ad827ebf2d2ad611cc4d1d
+Author: Vrishal Kulkarni <vrishal@fb.com>
+Date:   Fri Nov 20 06:57:18 2015 -0800
+
+    HBASE-14719 Add metrics for master WAL count (numMasterWALs). Metric numMasterWALs appears as follows in metrics dump
+    
+    {
+        "name" : "Hadoop:service=HBase,name=Master,sub=Procedure",
+        "modelerType" : "Master,sub=Procedure",
+        "tag.Context" : "master",
+        "tag.Hostname" : "vrishal-mbp",
+        "numMasterWALs" : 1
+    },
+    
+    Change-Id: Ia58e6f266583284306df0b8c46bbf6b83701defd
+
+commit 6967d985cde35ac67ab57c87b12b9337c7df5bf1
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Wed Oct 28 15:43:26 2015 -0700
+
+    HBASE-12769 Replication fails to delete all corresponding zk nodes when peer is removed (Jianwei Cui)
+    
+    Change-Id: I25547caa8c0638000241f3fe8853fc5bc31d0866
+    Reason: Bug
+    Author: Jianwei Cui
+    Ref: CDH-26191
+
+commit a41ae9a57781c8ce4610520a6f5e7516a3e39efd
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Tue Feb 23 16:52:13 2016 -0800
+
+    HBASE-15184 SparkSQL Scan operation doesn't work on kerberos cluster (Ted Malaska)
+    
+    Change-Id: If696acdbed7b78d622f1f7f171056c08ba4fbceb
+    Reason: New Feature
+    Author: Ted Malaska
+    Ref: CDH-37502
+
+commit 3646e7e00ef87c7bec7f3c709529212051317013
+Author: Jonathan M Hsieh <jon@cloudera.com>
+Date:   Wed Feb 24 10:20:59 2016 -0800
+
+    HBASE-15310 hbase-spark module has compilation failures with clover profile
+    
+    Change-Id: Ib127a4e6de1690130c70b24f99acedd4093aa8f4
+    Reason: Unit Test failures
+    Author: Jonathan Hsieh
+    Ref: CDH-37394
+
+commit 90626889543b1ef5b61b9faaaf93277f2eb2ef9d
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Feb 18 17:31:42 2016 -0800
+
+    HBASE-15282 Bump hbase-spark to use Spark 1.6.0
+    
+    Conflicts:
+    	hbase-spark/pom.xml
+    
+    Change-Id: Ia6a06deb7e631aca641db7f3ec495a2b26055d62
+
+commit 3ce44979ecd71cdfa86af3376716bd82e3db186d
+Author: Jenkins <dev-kitchen@cloudera.com>
+Date:   Fri Feb 12 19:07:52 2016 -0800
+
+    Updating Maven version to 5.7.0
+
+commit 442bf45d96f4a85cf9876072f399a9d40a223ff7
+Author: Jenkins <dev-kitchen@cloudera.com>
+Date:   Fri Feb 12 18:49:18 2016 -0800
+
+    Updating Maven version to 5.7.0
+
+commit 05f9f943da7b3deabed5a43343c7e1b3ceaa6b43
+Author: Jenkins <dev-kitchen@cloudera.com>
+Date:   Fri Feb 12 18:03:25 2016 -0800
+
+    Branch for CDH5.7.0
+
+commit 0888bd3d21c6247dc9111b80871e11f10db7944e
+Author: Jonathan M Hsieh <jon@cloudera.com>
+Date:   Thu Feb 11 17:52:28 2016 -0800
+
+    CDH-37191 org.apache.hadoop.hbase.spark.TestJavaHBaseContext unit tests failing on cdh5-1.2.0
+    
+    - Remove JavaSparkContext.addJar("spark.jar") - causes unit test failure
+    
+    Change-Id: I56470093265c19767cecaa02eae61a80e4d45102
+    Reason: Bug
+    Author: Joanthan Hsieh
+    Ref: CDH-37191
+
+commit 998a7595728fcec3f8cd2a735cf13de5d48570dd
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Tue Jan 26 11:02:48 2016 -0800
+
+    HBASE-15036 Update HBase Spark documentation to include bulk load with thin records (Ted Malaska)
+    
+    Change-Id: I8658f30e769f07e3ae6ff33b82c9a6f01c0603b1
+    Reason: New Feature
+    Author: Ted Malaska
+    Ref: CDH-35578
+
+commit 42d870fc65956681eed1816092cc5474573fcb32
+Author: Jerry He <jerryjch@apache.org>
+Date:   Mon Feb 8 14:13:46 2016 -0800
+
+    HBASE-15201 Add hbase-spark to hbase assembly
+    
+    Change-Id: I01a343a20f37bed07987e3de96e96d3a2c06fcd4
+    Reason: New Feature
+    Author: Jerry He
+    Ref: CDH-35578
+
+commit 1052345f7cd49de95efe364c1f37dbbf81621055
+Author: Apekshit <apeksharma@gmail.com>
+Date:   Mon Jan 11 12:04:53 2016 -0800
+
+    HBASE-14159 Add dependency on hadoop-mapreduce-client-jobclient from hbase-spark.
+    
+    fix hbase-spark pom to include hadoop-mapreduce-client-jobclient test-jar
+    
+    Adds a test-scope dependency to get rid of following error:
+    
+    [WARNING] warning: Class org.apache.hadoop.mapred.MiniMRCluster not found - continuing with a stub.
+    [WARNING] one warning found
+    
+    Change-Id: Ia05228fd2bb2ff6ec3c956472f39b0f68c6bf90f
+    Signed-off-by: Sean Busbey <busbey@cloudera.com>
+    Reason: New Feature
+    Author: Apekshit Sharma
+    Ref: CDH-35578
+
+commit 06cec0f10f3a4f8a5e95d94d796deacf69dbfb1d
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Mon Dec 28 15:48:10 2015 -0800
+
+    HBASE-14796 Enhance the Gets in the connector (Zhan Zhang)
+    
+    Change-Id: If22cce44e8afda5d3f31fa8785b4976786a540fd
+    Reason: New Feature
+    Author: Zhan Zhang
+    Ref: CDH-35578
+
+commit 49a5edea34680f022cb7ecd0216c4dfebeb0588f
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Sat Dec 19 15:14:58 2015 -0800
+
+    HBASE-14849 Add option to set block cache to false on SparkSQL executions (Zhan Zhang)
+    
+    Change-Id: Ia11dcd61f027379ccef68b26665774ce9baf87ea
+    Reason: New Feature
+    Author: Zhan Zhang
+    Ref: CDH-35578
+
+commit f5b6e3f0880690b64764fa5ea56ea8d85c4117f7
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Dec 17 14:19:36 2015 -0800
+
+    HBASE-14991 Fix the '-feature' warning in scala build (Zhan Zhang)
+    
+    Change-Id: Ia412fd123ac9b7b5c263a3bb968f71461564c688
+    Reason: New Feature
+    Author: Zhan Zhang
+    Ref: CDH-35578
+
+commit 210cce4d27b8c55178fbc02e5af4115c78e23051
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Sun Dec 13 18:26:54 2015 -0800
+
+    HBASE-14795 Enhance the spark-hbase scan operations (Zhan Zhang)
+    
+    Change-Id: Ia2fb2d5edbde6cad53610eaacb0f2eb83d5db9c6
+    Reason: New Feature
+    Author: Zhan Zhang
+    Ref: CDH-35578
+
+commit aef949e080a5339bebafb9911d6f49c58c11dbdf
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Sun Nov 22 07:31:06 2015 -0800
+
+    HBASE-14863 Add missing test/resources/log4j files in hbase modules
+    HBASE-14894 Fix Misspellings of threshold in log4j.properties files for tests
+    
+    Change-Id: Ic93ead1d23a8692ea789ef1b1f2568cf39a809c6
+    Reason: New Feature
+    Author: Matteo Bertozzi and Youngjoon Kim
+    Ref: CDH-35578
+
+commit 9eb33363b03c313b3762cae7c6a9bc335f4ac4c6
+Author: Andrew Purtell <apurtell@apache.org>
+Date:   Tue Nov 17 13:48:47 2015 -0800
+
+    HBASE-14340 Add second bulk load option to Spark Bulk Load to send puts as the value (Ted Malaska)
+    
+    Conflicts:
+    	hbase-spark/src/main/scala/org/apache/hadoop/hbase/spark/HBaseContext.scala
+    
+    Change-Id: I395b26b471a3d2ddfd8b08d3337ec005952b2c65
+    Reason: New Feature
+    Author: Ted Malaska
+    Ref: CDH-35578
+
+commit 8f5888f35358437821ef35bbef80e541ecea8646
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Fri Oct 16 11:22:07 2015 -0700
+
+    HBASE-14406 The dataframe datasource filter is wrong, and will result in data loss or unexpected behavior (Ted Malaska)
+    
+    Conflicts:
+    	hbase-protocol/src/main/java/org/apache/hadoop/hbase/protobuf/generated/FilterProtos.java
+    	hbase-spark/pom.xml
+    
+    Change-Id: I243ecfaad6c4c1ca29df66427fb16c6d204b8734
+    Reason: New Feature
+    Author: Ted Malaska
+    Ref: CDH-35578
+
+commit b9657f5bfd8ae2563e93a5988494ada41441cb6b
+Author: ted malaska <ted.malaska@cloudera.com>
+Date:   Mon Oct 12 11:23:16 2015 -0400
+
+    HBASE-14158 Add documentation for Initial Release for HBase-Spark Module integration
+    
+    Signed-off-by: Misty Stanley-Jones <mstanleyjones@cloudera.com>
+    
+    Conflicts:
+    	src/main/asciidoc/_chapters/spark.adoc
+    
+    Change-Id: I5dd65ba6784778f0bdecbbd0326acc4297e54028
+    Reason: New Feature
+    Author: Ted Malaska
+    Ref: CDH-35578
+
+commit 23206986c67d44687f6dd0dd2173240e32b677ce
+Author: Sean Busbey <busbey@apache.org>
+Date:   Tue Sep 29 20:00:49 2015 -0500
+
+    HBASE-14515 make sure spark tests are skippable like the other modules.
+    
+    Conflicts:
+    	hbase-spark/pom.xml
+    
+    Change-Id: I99ce5721738192cd3dfe8f123ecc9ae6eb0f8a05
+    Reason: New Feature
+    Author: Sean Busbey
+    Ref: CDH-35578
+
+commit e9f9b9eaf5758b159815c49359a3bc7c1b13c7b1
+Author: stack <stack@apache.org>
+Date:   Thu Sep 17 09:12:48 2015 -0700
+
+    HBASE-14447 Spark tests failing: bind exception when putting up info server
+    
+    Change-Id: I4d6fb34d65e1850e5f485501320bf1a34bbdb4ff
+    Reason: New Feature
+    Author: Michael Stack
+    Ref: CDH-35578
+
+commit e0bbc6db0fa96715d8543cc97b2c8af997519445
+Author: Sean Busbey <busbey@cloudera.com>
+Date:   Mon Sep 7 09:51:47 2015 -0500
+
+    HBASE-14377 JavaHBaseContextSuite isn't being run.
+    
+    Change-Id: I742f14f4a0bab7ab57ab8a3902221f6a7d1216c3
+    Reason: New Feature
+    Author: Sean Busbey
+    Ref: CDH-35578
+
+commit aec0a79caf38be2dfda2e328d9fb703a705a1e6f
+Author: Ted Malaska <ted.malaska@cloudera.com>
+Date:   Mon Sep 7 09:19:52 2015 -0500
+
+    HBASE-14181 Add Spark DataFrame DataSource to HBase-Spark Module
+    
+    Signed-off-by: Sean Busbey <busbey@cloudera.com>
+    
+    Conflicts:
+    	hbase-protocol/src/main/java/org/apache/hadoop/hbase/protobuf/generated/FilterProtos.java
+    
+    Change-Id: I0c32d66e5a7ec3e4b4fe1d7c26db26b1e6605565
+    Reason: New Feature
+    Author: Ted Malaska
+    Ref: CDH-35578
+
+commit cf5ce31ee3a0ea9ef09468145bdaaca73b3ead4a
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Wed Aug 12 08:29:03 2015 -0700
+
+    HBASE-14150 Add BulkLoad functionality to HBase-Spark Module (Ted Malaska)
+    
+    - fix to use older internal hfile api (HFileWriterImpl -> AbstractHFileWriter)
+    - fix to use older internal comparator apis (CellComparator.COMPARATOR -> KeyValue.COMPARATOR)
+    
+    Change-Id: I3471c2cad7807e1edc2b92ac1d9b2c95bfa6c25a
+    Reason: New Feature
+    Author: Ted Malaska
+    Ref: CDH-35578
+
+commit ec313a184325c04852dc72233d8c8a59a4420fd4
+Author: Jonathan M Hsieh <jon@cloudera.com>
+Date:   Fri Feb 5 07:44:04 2016 -0800
+
+    CLOUDERA-BUILD change pom to use hbase 1.2.0_cdh5.7.0-SNAPSHOT, spark 1.6.0_cdh5.7.0-SNAPSHOT
+    
+    Change-Id: Ia7cac35bc1dd0273d49ff55b2f8c164eb50ca5aa
+    Reason: New Feature
+    Author: Jonathan Hsieh
+    Ref: CDH-35578
+    
+    Change-Id: I6c2d479a2b7032e40e9048adde400ef1dc975671
+
+commit 526c112dab28cfbf94a1b115cfe582233b5758bf
+Author: Ted Malaska <ted.malaska@cloudera.com>
+Date:   Tue Jul 28 11:10:37 2015 -0500
+
+    HBASE-13992 Integrate SparkOnHBase into HBase
+    
+    Signed-off-by: Sean Busbey <busbey@cloudera.com>
+    
+    Conflicts:
+    	dev-support/test-patch.properties Minor tweaks to account for scala warns
+    
+    Change-Id: Iafc4f679668fea72f522b53ba652fa22437d7fca
+    Reason: New feature
+    Author: Ted Malaska
+    Ref CDH-35578
+
+commit a61ee744d93e1be50245c89e5c7a49e13a5f563c
+Author: tedyu <yuzhihong@gmail.com>
+Date:   Tue Jan 19 13:08:24 2016 -0800
+
+    HBASE-14865 Support passing multiple QOPs to SaslClient/Server via hbase.rpc.protection (Appy)
+    
+    Reason: Customer support
+    Ref:CDH-35557
+    Author: Appy
+
+commit 165fa3779b525f1581e58c77747d5d1060ce3712
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Jan 11 16:59:07 2016 -0800
+
+    CLOUDERA-BUILD partial revert HBASE-14684 Try to remove all MiniMapReduceCluster in unit tests
+
+commit 4b4c300531044f7844f3d18f737f083e0ad792a3
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Mon Jul 13 14:36:44 2015 +0530
+
+    HBASE-12015 Not cleaning Mob data when Mob CF is removed from table.(Pankaj Kumar)
+    
+    Reason: Bug
+    Author: Pankaj Kumar
+    Ref: CDH-33507
+    
+    Change-Id: If465b05864407713272d4addc69ef00636dda341
+
+commit b0012a9ebed53e3d69d800f9a227caa166c943db
+Author: Huaxiang Sun <hsun@cloudera.com>
+Date:   Fri Jan 8 18:54:02 2016 -0800
+
+    HBASE-11339 Merge remote-tracking branch 'apache/hbase-11339' (Jingcheng Du) (addendum)
+    
+    Reason: New Feature
+    Author: Jonathan Hsieh
+    Ref: CDH-33507
+    
+    Change-Id: If9109e8c1b9347166b720676a3b6dbb455b780c2
+
+commit f10d3ba6a18e2d71184f1fa54c6572c5e6aa8c12
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Mar 30 18:56:04 2015 +0200
+
+    HBASE-12749 Tighten HFileLink api to enable non-snapshot uses (addendum)
+    
+    Reason: Test
+    Author: Matteo Bertozzi
+    Ref: CDH-26305
+
+commit c0c2db45a556c3b9360ccfd285abc12914cd414e
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Fri Mar 27 16:40:44 2015 +0100
+
+    HBASE-12749 Tighten HFileLink api to enable non-snapshot uses (addendum)
+    
+    Reason: Bug
+    Author: Jonathan Hsieh
+    Ref: CDH-26305
+
+commit 86eb431f45f30429b9446867ee1668f582ce1886
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Wed Sep 24 06:40:04 2014 -0700
+
+    HBASE-12080 Shorten the run time of integration test by default when using mvn failsafe:integration-test (Jingcheng Du)
+    
+    Reason: MOB feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 61be9f22dace33f5326f0acde3bc4ca44b287c26
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Sun Feb 1 02:00:52 2015 -0800
+
+    CLOUDERA-BUILD Move test annotations from MOB and Quotas to org.apache.hadoop.hbase.testclassification
+    
+    Reason: New Feature
+    Author: Esteban Gutierrez
+    Ref: CDH-35507
+    
+    Change-Id: I025cb20d3e16407e05decf018ea0fda6aeba4901
+
+commit 0f24cb206bd997593af00c4103c096b0d94b43f2
+Author: Huaxiang Sun <hsun@cloudera.com>
+Date:   Fri Jan 8 18:39:36 2016 -0800
+
+    HBASE-14302 TableSnapshotInputFormat should not create back references when restoring snapshot (addendum)
+    
+    Reason: Bug
+    Author: Enis Soztutar
+    Ref: CDH-35507
+    
+    Change-Id: Ic2b944a292949c7053a326c2def679253a656be1
+
+commit 9ac404348881a3bfe548c3ee3a50b732b7ead18d
+Author: Huaxiang Sun <hsun@cloudera.com>
+Date:   Fri Jan 8 17:32:08 2016 -0800
+
+    HBASE-8329 Limit compaction speed (addendum)
+    Reason: New Feature
+    Author: Duo Zhang
+    Ref: CDH-35507
+    
+    Change-Id: I510fece5b57471db902a3ef02c81b7a04fcc50f6
+
+commit 346fd6b79966249674f7ae0eb10a039b588b53bf
+Author: Huaxiang Sun <hsun@cloudera.com>
+Date:   Fri Jan 8 18:22:02 2016 -0800
+
+    HBASE-6778 Deprecate Chore; its a thread per task when we should have one thread to do all tasks (addendum)
+    
+    Reason: Cleanup
+    Author: Jonathan Lawlor
+    Ref: CDH-35507
+    
+    Change-Id: I74c075154f09b525aaf53b8a5d481286a06cf33b
+
+commit 943d6fec43c2664e9f83a082d2e56824d325c1c6
+Author: Huaxiang Sun <hsun@cloudera.com>
+Date:   Fri Jan 8 17:43:48 2016 -0800
+
+    HBASE-14098 Allow dropping caches behind compactions (addendum)
+    Summary: On large compactions drop the OS level fs cache behind reads and writes.
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-35507
+    
+    Change-Id: I6df7558e9cf13d130105651b02aff0aac51c3e10
+
+commit 710a65dddb2e4d3c9e231a283d06b80753fb6a4d
+Author: Huaxiang Sun <hsun@cloudera.com>
+Date:   Fri Jan 8 17:36:34 2016 -0800
+
+    HBASE-13109 Make better SEEK vs SKIP decisions during scanning. (addendum)
+    
+    Reason: Product Requirement (Compatibility)
+    Author: Lars Hofhansl
+    Ref: CDH-35507
+    
+    Change-Id: I332ab9ee85122b28b6a7b1bf9814025b7cec94be
+
+commit d4944284acd94423cffc6ce8b88f9325d297fe63
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Wed Jul 1 11:26:24 2015 +0530
+
+    HBASE-13670 [HBase MOB] ExpiredMobFileCleaner tool deletes mob files later for one more day after they are expired. (Jingcheng)
+    
+    Reason: Bugfix
+    Author: Jingcheng Du
+    Ref: CDH-31077
+
+commit e4b983cccbbd9fe8f8dcfbbb49c0d39791169066
+Author: ramkrishna <ramkrishna.s.vasudevan@gmail.com>
+Date:   Wed Jun 24 09:22:44 2015 +0530
+
+    HBASE-13932 - Add mob integrity check in HFilePrettyPrinter (Jingcheng du)
+    
+    Reason: Bugfix
+    Author: Jingcheng Du
+    Ref: CDH-31077
+
+commit 1c2dd5865c0ba7eb8771aae66a7a250bfbca0b7e
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Tue Jun 16 17:17:03 2015 +0530
+
+    HBASE-13886 Return empty value when the mob file is corrupt instead of throwing exceptions. (Jingcheng)
+    
+    Conflicts:
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/mob/MobUtils.java
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HMobStore.java
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.java
+    
+    Change-Id: I71261e91e921efe3d83e52af4e39cb13f3215423
+    Reason: Bugfix
+    Author: Jingcheng Du
+    Ref: CDH-31077
+
+commit 8f5922dbdff5e3e0cfd8605981c3c69fd91789f8
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Tue Jun 16 15:02:50 2015 +0530
+
+    HBASE-13737 [HBase MOB] MOBTable cloned from a snapshot leads to data loss, when that actual snapshot and main table is deleted. (Ashutosh Jindal)
+    
+    Conflicts:
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/client/TestMobSnapshotCloneIndependence.java
+    
+    Reason: Bugfix
+    Author: Ashutosh Jindal
+    Ref: CDH-31077
+
+commit e7c33e1649b9f46c69fd06a386095ed1e2bcd433
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Thu Jun 11 15:32:19 2015 +0530
+
+    HBASE-13855 Race in multi threaded PartitionedMobCompactor causes NPE. (Jingcheng)
+    
+    Reason: Bugfix
+    Author: Jingcheng Du
+    Ref: CDH-31077
+
+commit 81137adee8fab4b4960510046c1e960c450f9fac
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Mon Jun 8 11:17:43 2015 +0530
+
+    HBASE-13806 Check the mob files when there are mob-enabled columns in HFileCorruptionChecker. (Jingcheng)
+    
+    Change-Id: I38eff13da83d111802474c28dc25f72ee893ba28
+    Reason: Bugfix
+    Author: Jingcheng Du
+    Ref: CDH-31077
+
+commit 6038120f8ecae54936e28105dbc20e2855da434e
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Sat May 16 16:45:49 2015 -0700
+
+    HBASE-13531 Flakey failure of TestAcidGuarantees#testMobScanAtomicity (Jingcheng Du)
+    
+    rd point was not properly handled in the mob scanner case.
+    
+    Minor changes with mvcc and checksums
+    Conflicts:
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/mob/MobUtils.java
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HMobStore.java
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.java
+    
+    Change-Id: Id04186f0c32cd7ae295508480f0caa6ae9e9d2fe
+    Reason: Bugfix
+    Author: Jingcheng Du
+    Ref: CDH-31077
+
+commit bb3f32bb2c591efba3521d326f74d43fe5c2e6ca
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Fri Apr 10 13:26:47 2015 +0530
+
+    HBASE-13313 Skip the disabled table in mob compaction chore and MasterRpcServices.(Jingcheng)
+    
+    - reverts to older style is enabled check
+    
+    Reason: Bugfix
+    Author: Jingcheng Du
+    Ref: CDH-31077
+
+commit 4531a6d6ca87c37ded8ea26d46a4601e54d45887
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Wed Apr 8 06:01:34 2015 -0700
+
+    HBASE-13302 fix new javadoc introduced by mob
+    
+    Reason: Bugfix
+    Author: Jonathan Hsieh
+    Ref: CDH-31077
+
+commit 6206f73168e86a8caa625192f4711e0cfa13a7e1
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Fri Mar 20 09:48:04 2015 -0700
+
+    HBASE-13277 add mob_threshold option to load test tool
+    
+    Reason: Improvement
+    Author: Jonathan Hsieh
+    Ref: CDH-31077
+
+commit f72eb5577a960016620c74999efe956abd8a5086
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Fri Mar 20 12:23:35 2015 -0700
+
+    CLOUDERA-BUILD [mob] Enable HFileV3 for MOB tests
+    
+    Reason: Testing
+    Author: Esteban Gutierrez
+    Ref: CDH-26298
+
+commit 98ed497df54897d81989fc5a48da709c1f93e30d
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Fri Mar 13 10:37:52 2015 -0700
+
+    HBASE-13230 [mob] reads hang when trying to read rows with large mobs (>10MB)
+    
+    Conflicts:
+    	hbase-client/src/main/java/org/apache/hadoop/hbase/ipc/AsyncServerResponseHandler.java
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/regionserver/TestMobStoreScanner.java
+    
+    Change-Id: Iffd6473dc8502deaa96e4040e07c9153dee3df45
+    Reason: Mob feature
+    Author: Jonathan Hsieh
+    Ref: CDH-26016
+
+commit 7dded1a710a6e734631f57909a5a4f9add831324
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Mar 5 11:48:09 2015 -0800
+
+    HBASE-13151 IllegalArgumentException in compaction when table has a namespace (Jingcheng Du)
+    
+    Conflicts:
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/mob/mapreduce/TestMobSweeper.java
+    
+    Change-Id: Iee71c7bcf4347ba62ec1ef553efc3028ece32dab
+    Reason: Mob Testing
+    Author: Jingcheng Du
+    Ref: CDH-23959
+
+commit bef272f4e57862b9641b38533f6ec52c5a3b8760
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Mar 5 11:29:21 2015 -0800
+
+    HBASE-13107 Refactor MOB Snapshot logic to reduce code duplication (Jingcheng Du)
+    
+    Change-Id: I3a66cb01e0e80ac10ef96f3092eec57f188ffe29
+    Reason: Mob Feature
+    Author: Jingcheng Du
+    Ref: CDH-22447
+
+commit ef220193897ed9d530f6ffc95c4ec6e539a75b56
+Author: Jonathan M Hsieh <jon@cloudera.com>
+Date:   Tue Mar 3 17:15:26 2015 -0800
+
+    HBASE-13157 Add Mob compaction actions and monkeys to Chaos Monkey
+    
+    Change-Id: I6738783fe7d7f502d2208e3e112b8f6ef14e91a1
+    Reason: Mob Testing
+    Author: Jonathan Hsieh
+    Ref: CDH-23959
+
+commit 8390692fe701cc6ca409ec81f9c57a8ae60949fc
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Mar 5 09:59:59 2015 -0800
+
+    HBASE-12332 [mob] improve how we resolve mobfiles in reads (Jingcheng Du and Jiajia Li)
+    
+    Reason: Mob Testing
+    Author: Jingcheng Du and Jiajia Li
+    Ref: CDH-23959
+
+commit c2a8242c203fec37435b2481394577c5d1bb2145
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Tue Mar 3 09:20:03 2015 -0800
+
+    HBASE-13154 add support for mob in TestAcidGuarantees and IntegrationTestAcidGuarantees
+    
+    Reason: Mob Testing
+    Author: Jonathan Hsieh
+    Ref: CDH-23959
+
+commit 60387557c8c18435d08ad17a1b315fe8154d2327
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Wed Mar 4 07:18:52 2015 -0800
+
+    HBASE-13152 NPE in ExpiredMobFileCleanerChore (Jingcheng Du)
+    
+    Reason: Mob Testing
+    Author: Jingcheng Du
+    Ref: CDH-23959
+
+commit 8268bbcb2a39affabf263a188c001eb572e57967
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Tue Mar 3 04:47:58 2015 -0800
+
+    HBASE-12670 Add unit tests that exercise the added hfilelink link mob paths (Jingcheng Du)
+    
+    Reason: Mob Testing
+    Author: Jingcheng Du
+    Ref: CDH-23959
+
+commit afa295876519252c8e22646e76e1ba9ccd30cf02
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Wed Mar 4 23:47:05 2015 -0800
+
+    HBASE-13012 Add shell commands to trigger the mob file compactor (Jingcheng Du and Jiajia Li)
+    
+    Conflicts:
+    	hbase-client/src/main/java/org/apache/hadoop/hbase/client/HBaseAdmin.java
+    	hbase-common/src/main/resources/hbase-default.xml
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/master/HMaster.java
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/master/MasterRpcServices.java
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/master/MobFileCompactionChore.java
+    
+    Change-Id: I412a5b6e609ea18965a509175fcefbcdcfeb525f
+    Reason: MOB Feature
+    Author: Jingcheng Du and Jiajia Li
+    Ref: CDH-25606
+
+commit 5386205962142439d5c8d9155638068a9503d5b3
+Author: Jonathan M Hsieh <jon@cloudera.com>
+Date:   Thu Feb 26 11:11:18 2015 -0800
+
+    HBASE-13117 improve mob sweeper javadoc
+    
+    Reason: MOB Feature
+    Author: Jonathan Hsieh
+    Ref: CDH-20651
+
+commit b7709347351d199527bec24bb4d6bec2f3ca0b8d
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Wed Feb 18 09:27:41 2015 +0530
+
+    HBASE-13013 - Add read lock to ExpiredMobFileCleanerChore (Jingcheng Du)
+    
+    Reason: MOB feature
+    Author: Jingcheng Du
+    Ref: CDH-22449
+
+commit 6592ba58a44b6fc13d3f518652ac0d98496c0d08
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Fri Feb 6 05:37:13 2015 -0800
+
+    HBASE-11861 Native MOB Compaction mechanisms (Jingcheng Du)
+    
+    Reason: MOB feature
+    Author: Jingcheng Du
+    Ref: CDH-22449
+
+commit 37ab7325053e5721b117f563dd7e1c4cde5ff57e
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Sat Jan 24 11:37:01 2015 +0530
+
+    HBASE-12820 Use table lock instead of MobZookeeper.(Jingcheng Du)
+    
+    Conflicts:
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/mob/mapreduce/TestMobSweepMapper.java
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/mob/mapreduce/TestMobSweepReducer.java
+    
+    Change-Id: I7a0ed9fde48d2040fcc11379ab6612acd505b300
+    Reason: MOB feature
+    Author: Jingcheng Du
+    Ref: CDH-20651
+
+commit 01e715417d389f579dfacfef569f8c83d7b62b67
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Thu Jan 22 14:52:40 2015 +0530
+
+    HBASE-12669 - Have compaction scanner save info about delete markers
+    (Jingcheng Du)
+    
+    Reason: MOB feature
+    Author: Jingcheng Du
+    Ref: CDH-22449
+
+commit 8d1c5d9e50c678b9906dfa4ebcbb0c52bafc5fd9
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Dec 25 13:59:53 2014 -0800
+
+    HBASE-12698 Add mob cell count to the metadata of each mob file (Jingcheng Du)
+    
+    Reason: MOB feature
+    Author: Jingcheng Du
+    Ref: CDH-20651
+
+commit b56551bfe9c86021e086d35445886df95495f596
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Sun Dec 14 10:20:50 2014 -0800
+
+    HBASE-12691 Mob Sweeper job needs to exit with non-zero error value if job fails for any reason
+    
+    Reason: MOB feature
+    Author: Jonathan Hsieh
+    Ref: CDH-20651
+
+commit 4f33efef961922d57be7ae7e3a8b6e2300a9f58a
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Fri Nov 21 15:28:37 2014 +0530
+
+    HBASE-12543 Incorrect log info in the store compaction of mob (Jiajia Li)
+    
+    Reason: MOB feature
+    Author: Jiajia Li
+    Ref: CDH-20651
+
+commit f4860bfe3e6ddc00a58e1cbfa37af317ee25bdab
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Dec 25 14:06:26 2014 -0800
+
+    HBASE-12331 Shorten the mob snapshot unit tests (Jiajia Li)
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-22447
+
+commit 5f929cc8ca4edc66601bec44941aa251c977e0c2
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Wed Dec 24 08:18:48 2014 -0800
+
+    HBASE-12758 treat mob region as any other region when generating rs manifest
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-22447
+
+commit 52a6f7f00fd41f93665a1aaebe5aa27216ee21c3
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Sat Dec 6 08:47:14 2014 -0800
+
+    HBASE-12646 SnapshotInfo tool does not find mob data in snapshots
+    
+    Adds MobPath to HFileLink Resolver
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-22447
+
+commit ff3bb3d269daf7aa9dc2526dfbeb7a45e1ff6a34
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Oct 23 10:19:16 2014 -0700
+
+    HBASE-11645 Snapshot for MOB (Jingcheng Du)
+    
+    Conflicts:
+    	hbase-
+    server/src/main/java/org/apache/hadoop/hbase/master/snapshot/DisabledTableSnapshotHandler.java
+    	hbase-
+    server/src/main/java/org/apache/hadoop/hbase/snapshot/ExportSnapshot.java
+    	hbase-
+    server/src/main/java/org/apache/hadoop/hbase/snapshot/SnapshotReferenceUtil.java
+    
+    Change-Id: I5e6860381d66d7e357637f9fcebb3e9cb67f54a3
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-22447
+
+commit df47300896f881733c10e7c87f0fa6958c4ac0ec
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Fri Nov 21 08:53:27 2014 +0530
+
+    HBASE-12487 Explicitly flush the file name in sweep job (Jingcheng Du)
+    
+    Reason: Bug
+    Author: Li Jiajia
+    Ref: CDH-23659
+
+commit b602ef873829d6bc9f5e59c4834ece12de5a545c
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Wed Dec 10 19:43:59 2014 -0800
+
+    HBASE-12540 TestRegionServerMetrics#testMobMetrics test failure (Jingcheng Du and Jiajia Li)
+    
+    Reason: Mob support
+    Author: Jingcheng Du and Jiajia Li
+    Ref: CDH-23093
+
+commit f4e8c1de744cbff3508b104e6afbe700441d7d3f
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Tue Dec 2 07:14:39 2014 +0530
+
+    HBASE-12591 Ignore the count of mob compaction metrics when there is issue.(Jiajia Li)
+    
+    Reason: Bug
+    Author: Li Jiajia
+    Ref: CDH-23659
+
+commit 44b9774caf74378f116a9c63ce06fd6f74f5f615
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Thu Nov 20 10:29:06 2014 +0530
+
+    HBASE-12489 Incorrect 'mobFileCacheMissCount' calculated in the mob
+    metrics (Li Jiajia)
+    
+    Reason: Bug
+    Author: Li Jiajia
+    Ref: CDH-23659
+
+commit f8be4d856f7b27db2b31e0c243bb915b02527701
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Fri Oct 31 15:00:17 2014 +0530
+
+    HBASE-12391 Correct a typo in the mob metrics (Jingcheng Du)
+    
+    Change-Id: I57f7d5467831009f0cf54537fdfcb2754e65c06c
+
+commit 77bb40fecf7598680cad2c270726076fb548748e
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Oct 30 06:50:13 2014 -0700
+
+    HBASE-11683 Metrics for MOB (Jingcheng Du)
+    
+    Conflicts:
+    	hbase-hadoop-compat/src/main/java/org/apache/hadoop/hbase/regionserver/MetricsRegionServerWrapper.java
+    	hbase-hadoop2-compat/src/main/java/org/apache/hadoop/hbase/regionserver/MetricsRegionServerSourceImpl.java
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/MetricsRegionServerWrapperImpl.java
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/regionserver/MetricsRegionServerWrapperStub.java
+    
+    Change-Id: Ia82f8bbce6c228539b784bf1a2276f2b24fe435e
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-22448
+
+commit 9d15ac7f01412a1a79e8e305202ee7c944489e6e
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Fri Nov 21 08:52:11 2014 +0530
+
+    HBASE-12486 - Move the mob table name tag to the 2nd one (Jingcheng Du)
+    
+    Reason: Bug
+    Author: Li Jiajia
+    Ref: CDH-23659
+
+commit 906bdeaf1f3d44279d68e44fffc0a9931154df8a
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Fri Oct 31 15:43:58 2014 +0530
+
+    HBASE-12392 Incorrect implementation of CompactionRequest.isRetainDeleteMarkers(Jingcheng Du)
+    
+    Reason: Bug
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 31fe02fea006ea317626e35357f6511fc79550b9
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Fri Sep 26 18:13:29 2014 +0530
+
+    HBASE-12093 Support the mob attributes in hbase shell when create/alter table
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 8534cff14d5d0ee3ddfa327b7abfc33d0cd20741
+Author: Ramkrishna <ramkrishna.s.vasudevan@intel.com>
+Date:   Thu Oct 9 09:50:39 2014 +0530
+
+    HBASE-12201 Close the writers in the MOB sweep tool (Jingcheng Du)
+    
+    Reason: Bug
+    Author: Jingcheng Du
+    Ref: CDH-22318
+
+commit 249aa8ebe82af7a5b54de39c5f622bb0053d7ff0
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Fri Sep 26 13:29:36 2014 +0530
+
+    HBASE-12085 mob status should print human readable numbers.(Jingcheng Du)
+    
+    Change-Id: I495fff641711784c3e22ebe7600d5b60b73937b0
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 0103fe2a57480bf157f0902bf9ffa151eac58588
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Thu Sep 25 09:47:57 2014 +0530
+
+    HBASE-12030 Wrong compaction report and assert when MOB compaction switches to minor.
+    
+    Conflicts:
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/regionserver/TestMobCompaction.java
+    
+    Change-Id: Id58751de0ca9c58a4ff199dcc13b59685d308293
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 291374dbc9433c9008e8cb9a1df62d486007b6c8
+Author: Jonathan M Hsieh <jon@cloudera.com>
+Date:   Tue Sep 23 07:38:34 2014 -0700
+
+    HBASE-12066 Avoid major compaction in TestMobSweeper
+    
+    Reason: MOB feature
+    Author: Jonathan M Hsieh
+    Ref: CDH-19420
+
+commit e52f52b4763dd08733c44626809ea4db38db27e5
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Fri Sep 19 11:13:06 2014 -0700
+
+    HBASE-12027 The ZooKeeperWatcher in HMobStore only uses the default conf (Jingcheng Du)
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit df1a0e95b56ef38f6eb18940035f6010a587b719
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Fri Sep 19 03:02:06 2014 -0700
+
+    HBASE-11644 External MOB compaction tools (Jingcheng Du)
+    
+    Change-Id: I9d63f772e8c2a4477bef06e69644407029ef8bdb
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 0b504c561b6175914bc336d0a9949484655f5b0e
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Sep 18 07:03:21 2014 -0700
+
+    HBASE-11646 Handle the MOB in compaction (Jingcheng Du)
+    
+    Conflicts:
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/compactions/Compactor.java
+    	hbase-server/src/main/java/org/apache/hadoop/hbase/regionserver/compactions/DefaultCompactor.java
+    
+    Change-Id: I7df07585fe0925e9c0fb718acc25093d56670357
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 51ec90b30892bb384f6753b3782b5e0e49c193a2
+Author: Misty Stanley-Jones <mstanleyjones@cloudera.com>
+Date:   Wed Sep 17 12:46:10 2014 +1000
+
+    HBASE-12000 isMob and mobThreshold do not adhere to naming conventions
+    
+    Reason: MOB Feature
+    Author: Misty Stanley Jones
+    Ref: CDH-19420
+
+commit ff48353d7a4e9d153d4083af543b0d76d7e38967
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Sun Sep 14 14:21:00 2014 +0530
+
+    HBASE-11968 If MOB is enabled, it should make sure hfile v3 is being used.
+    
+    Change-Id: Iae043e2f9cd85387b55e71c00f9d02a3f883f928
+    Reason: MOB Feature
+    Author: Anoop Sam John
+    Ref: CDH-19420
+
+commit 6bf4c3ffda053451ede1ec4bc82bc26c8a053472
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Sat Sep 6 10:06:37 2014 +0530
+
+    HBASE-11647 MOB integration testing. (Jingcheng Du)
+    HBASE-11647 MOB integration testing. - addendum(Jingcheng Du)
+    HBASE-11647 addendum to fix compile issues.
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 37e6fc25cce9a7598ce676bad069d4531d9624e7
+Author: anoopsjohn <anoopsamjohn@gmail.com>
+Date:   Sat Sep 6 09:59:55 2014 +0530
+
+    HBASE-11901 Improve the value size of the reference cell in mob column.(Jingcheng Du)
+    
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 278eb9c37d18c0dc8fbc67831acd245d3151eb6d
+Author: Jonathan M Hsieh <jmhsieh@apache.org>
+Date:   Thu Sep 4 05:41:21 2014 -0700
+
+    HBASE-11643 Read and write MOB in HBase (Jingcheng Du)
+    Adds hfile.format.version = 3 to mob tests
+    
+    Change-Id: I045c5cd69b411a7479e95984e9bc30b40d5bb97f
+    Reason: MOB Feature
+    Author: Jingcheng Du
+    Ref: CDH-19420
+
+commit 58006e30b29cd6ca66dbb52b7ee17e6ac08c5c26
+Author: Philip Zeyliger <philip@cloudera.com>
+Date:   Fri Nov 20 23:59:30 2015 +0000
+
+    CLOUDERA-BUILD Specify assembly artifact naming.
+    
+    Reason: New Feature
+    Author: Philip Zeyliger
+    Ref: CDH-34616
+    
+    When using SNAPSHOT artifacts, there are two names
+    for an hbase jar.  For example,
+      hbase-server-1.0.0-cdh5.7.6-20151201.205646-1.jar (stored in
+      org/apache/hbase/hbase-server/1.0.0-cdh5.7.6-SNAPSHOT in a maven repo)
+    or
+      hbase-server-1.0.0-cdh5.7.6-SNAPSHOT.jar
+    
+    Depending on whether you're using the local ~/.m2/repository
+    or a "remote" file:// repository, the assembly gets
+    different names.  Our world expects the -SNAPSHOT name, and
+    fails subtly if it doesn't happen.
+    
+    The suble error you'd see would be something like this from
+    the RPM build:
+    
+      + echo Linktype:internal:LinkName:hbase-annotations.jar:LinkSource:hbase-annotations-1.0.0-cdh5.7.6-20151120.231720-1.jar
+      ... many lines making it hard to reason about ...
+      + ln -s hbase-annotations-1.0.0-cdh5.7.6-SNAPSHOT.jar hbase-annotations.jar
+      ln: creating symbolic link base-annotations.jar': File exists
+    
+    This very small XML change makes that error go away.
+    
+    Other people have experienced this at https://issues.apache.org/jira/browse/MASSEMBLY-67.
+    
+    Change-Id: I80412b8e022207a94967c792a2b95ff9e7114d47
+
+commit 60a026385a2186a7cf7e658c9bf07e6566f99b67
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Oct 5 11:50:21 2015 -0700
+
+    CLOUDERA-BUILD Add pre-commit hook
+
+commit 2f722e2125f76220bf2ce146d1915665571167de
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Mon Jul 27 22:14:16 2015 -0700
+
+    CLOUDERA-BUILD Bumping HTrace version to 3.2.0-incubating
+    
+    Author: Esteban Gutierrez
+    Reason: Compatibility
+    Ref: CDH-29651
+
+commit c577eaea28703239a371fb14883d30cc487296b6
+Author: Srikanth Srungarapu <ssrungarapu@cloudera.com>
+Date:   Tue Jul 14 20:58:31 2015 -0700
+
+    CLOUDERA-BUILD Revert back the name and type changes block cache hit percentage that broke operational compatibility
+    
+    Change-Id: Id1b439928d736b24d5a8111f5fc33568d9ff6492
+    Reason: Backward Compatibility
+    Author: Srikanth Srungarapu
+    Ref: CDH-29488
+
+commit 742f76d9c15abcc8d246281206ca822d5b40fea9
+Author: Srikanth Srungarapu <ssrungarapu@cloudera.com>
+Date:   Fri May 22 11:45:21 2015 -0700
+
+    CLOUDERA-BUILD Revamp hbase shell to get rid of jruby's vulnerable jquery file
+    
+    Change-Id: I5c2a902a1d2c1f74d3c72297a0f217f35f7c0273
+    Reason: Product Requirement
+    Author: Srikanth Srungarapu
+    Ref: CDH-27397
+
+commit 1aaf569842f94b51abb39a6cf54bccfead937c16
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Apr 20 08:41:14 2015 +0100
+
+    CLOUDERA-BUILD Add back old HFileLink methods
+    
+    Reason: Compatibility
+    Author: Matteo Bertozzi
+    Ref: CDH-27131
+
+commit ec12c3945c1afe1c3590ab0494b9f4e996ceca00
+Author: Srikanth Srungarapu <ssrungarapu@cloudera.com>
+Date:   Mon Mar 16 13:37:16 2015 -0700
+
+    CLOUDERA-BUILD Binary incompatibilities between our HBase 0.98.6 and 1.0 branches --ADDENDUM
+    
+    Change-Id: Ibe275e0bae4120b18ff56ea54de0d654f689ab6e
+    Reason: Product Requirement (Compatibility)
+    Author: Srikanth Srungarapu
+    Ref: CDH-24305
+
+commit 2c1a472d4f04bb52f485ed0a6e8ab3e02313331e
+Author: Sean Busbey <busbey@cloudera.com>
+Date:   Tue Mar 10 11:02:35 2015 -0500
+
+    CLOUDERA-BUILD improve test robustness on low-end hardware with longer timeout.
+    
+    Change-Id: I0d821fa8adeb2c5785d51cac4db46a2e4e4e6069
+    Ref: CDH-24807
+
+commit eafcbc27b1d4906a80b2e22a3c56c96b91deb036
+Author: Sean Busbey <busbey@cloudera.com>
+Date:   Tue Mar 10 03:11:55 2015 -0500
+
+    CLOUDERA-BUILD improve dependency compatibility in hbase-client and hbase-server
+    
+    Ref: CDH-24807
+
+commit 6dbf1c7634e9f4d0af254ca2bb705b05b346ef4b
+Author: Srikanth Srungarapu <ssrungarapu@cloudera.com>
+Date:   Thu Mar 12 19:28:08 2015 -0700
+
+    CLOUDERA-BUILD Bringing back the old methods removed by HBASE-12363
+    
+    Change-Id: I30b8d433aa01ed138bc36bcfc970da5e179e7c36
+    Reason: Product Requirement (Compatibility)
+    Author: Srikanth Srungarapu
+    Ref: CDH-24305
+
+commit b9fe4eacc770ae08a269222cd38a3fe1a3db3971
+Author: Srikanth Srungarapu <ssrungarapu@cloudera.com>
+Date:   Wed Mar 4 20:35:58 2015 -0800
+
+    CLOUDERA-BUILD Binary incompatibilities between our HBase 0.98.6 and 1.0 branches
+    
+    Change-Id: Idec9f0c969c80bc6d1b0a8d963340d6e230ec5e8
+    Reason: Product Requirement (Compatibility)
+    Author: Srikanth Srungarapu
+    Ref: CDH-24305
+
+commit 7b73e5c21afcd53262cff6c5a7cbe4ebc68ae8b1
+Author: Srikanth Srungarapu <ssrungarapu@cloudera.com>
+Date:   Wed Mar 11 11:31:56 2015 -0700
+
+    CLOUDERA-BUILD Revert "HBASE-10471 Remove HTD.isAsyncLogFlush() from trunk"
+    
+    Reason: Product Requirement (Compatibility)
+    Author: Srikanth Srungarapu
+    Ref: CDH-24305
+    
+    This reverts commit 3cc587b961f4630d85b0b70c745f4a74675fc92c.
+    
+    Conflicts:
+    	hbase-server/src/test/java/org/apache/hadoop/hbase/regionserver/wal/TestDurability.java
+    
+    Change-Id: I02a7642f35a90d79f19e42f9eb4bcd62e2a12e42
+
+commit 7b6650f525a537d3f9022684cc2aa8f06a27ebf0
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Dec 14 15:42:39 2015 -0800
+
+    CLOUDERA-BUILD use reverse scan if meta replicas are enabled
+    
+    Author: Matteo Bertozzi
+    Reason: Read-Replicas Compatibility
+    Ref: CDH-35510
+
+commit 13a7edc392dd66feb20193ce13cbefc5d8af592a
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Mon Apr 20 20:52:55 2015 -0700
+
+    CLOUDERA-BUILD Revert "HBASE-10018 Remove region location prefetching" - ADDENDUM
+    
+    Author: Esteban Gutierrez
+    Reason: Backward compatibility
+    Ref: CDH-27098
+
+commit 67089ff328abbd5a2eb9447774f36bd33e17d0d1
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Fri Mar 13 09:41:40 2015 -0700
+
+    CLOUDERA-BUILD Revert "HBASE-10018 Remove region location prefetching" - ADDENDUM
+    
+    Author: Esteban Gutierrez
+    Reason: Backward Compatibility
+    Ref:  CDH-25972
+
+commit 82ab085f951170061fec44160b28d63505359b90
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Fri Mar 6 12:51:33 2015 -0800
+
+    CLOUDERA-BUILD Revert "HBASE-10018 Remove region location prefetching"
+    
+    - Reverse scans are not supported in CDH5.0.x (HBase 0.96) this
+      partial revert keeps the prefetch methods as deprecated however
+      the old region prefetch is restored in ConnectionManager in
+      order to support rolling upgades between CDH 5.0.x and +CDH5.4.x
+    
+    Change-Id: I55b7bd9fc2939ca5614ea23ade219ef70c2ccf62
+    Author: Esteban Gutierrez
+    Reason: Backward Compatibility
+    Ref: CDH-25837
+
+commit 9d798764155f613f7f247237d7fbf10836d7cb7c
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Thu Mar 5 20:54:06 2015 -0800
+
+    CLOUDERA-BUILD Enable HFileV2 by default
+    
+    Change-Id: I3acfb80b120dc2ced55a9dea6a187db6354e4ec5
+    Author: Esteban Gutierrez
+    Reason: Backward compatibility
+    Ref: CDH-25837
+
+commit b2213eeb42b178145cb3ef1f6887d3ba4e16aecd
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Tue Feb 10 15:51:40 2015 -0800
+
+    CLOUDERA-BUILD Restore deprecated property hadoop.ssl.enabled
+    
+    Author: Esteban Gutierrez
+    Reason: Product Requirement (Compatibility)
+    Ref: CDH-25049
+
+commit 957cf1d41aefe44acc7244f7b1b13f432521fb8e
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Thu Dec 18 21:14:34 2014 +0000
+
+    CLOUDERA-BUILD Revert "HBASE-12246 Compilation with hadoop-2.3.x and 2.2.x is broken -> HBASE-12220 Add hedgedReads and hedgedReadWins metrics -- REVERT"
+    
+    Change-Id: Ic43216ed6b4af03c6b73e3f9acbdc24db7d2a555
+
+commit b70b352f7d4640b95222e89702c03d7d751d39b6
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Thu Dec 18 15:36:30 2014 +0000
+
+    CLOUDERA-BUILD Revert HBASE-10123 Change default ports; move them out of linux ephemeral port range
+
+commit b74da77736113e33b3eb5eedca6564f6d72e6f1c
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Fri Dec 19 21:42:08 2014 +0000
+
+    CLOUDERA-BUILD partial revert HBASE-5697 Audit HBase for usage of deprecated hadoop 0.20.x, 1.x property names, for CDH5-MRv1
+    
+    Change-Id: I68926c01b10c1eab4fa46934bfd4fb70ca3e0655
+
+commit ad99f704f7547f7c156df5796deb4fee35f986d7
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Mon Dec 7 15:52:14 2015 -0800
+
+    CLOUDERA-BUILD update dependency listing for cdh5 profile.
+    
+    * move some dep scopes back to compile from test
+    * add cdh5 profile where missing
+    * ensure compilation against mrv1
+    
+    Change-Id: I56d7cfa3e9968d9cc1db8b3a5654bf57caa2e0a2
+    Reason: build
+    Ref: CDH-23876
+
+commit 492800b88b2b2888c5f17b25db9fb69146b71fda
+Author: Sean Busbey <busbey@cloudera.com>
+Date:   Mon Feb 23 00:19:21 2015 -0600
+
+    CLOUDERA-BUILD update MapreduceTestingShim to work for CDH5-MRv1.
+    
+    Ref: CDH-25346
+
+commit ea530e0e06d1b4479771b14f663b28c68d4da8b8
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Wed Aug 13 11:21:30 2014 -0700
+
+    CLOUDERA-BUILD Add a new profile for CDH5 to built against MR1. This is also the default profile.
+    
+    Change-Id: I8f66181be9444683ee76d5a230df18e440ab27cc
+    Ref: CDH-16257
+    Reason: Product Requirement (Compatibility)
+    Author: Himanshu Vashishtha, Jimmy Xiang, Elliott Clarke
+
+commit 5bcfa4a035ac5bdaa4b7b45cefff1a58bfd174bf
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Dec 15 18:24:49 2014 +0000
+
+    CLOUDERA-BUILD Compatibility Revert HBASE-10841 and HBASE-12046 HTD/HCD setters should be builder-style
+    
+    Change-Id: If99fd82becd80d7d7585fb4e97487c65b0ad7c7d
+
+commit 9767843cc858940597628f04ca3fe9998da4910d
+Author: Esteban Gutierrez <esteban@cloudera.com>
+Date:   Fri Oct 3 16:54:26 2014 -0700
+
+    CLOUDERA-BUILD Enable hbase.zookeeper.useMulti
+    
+    Ref: CDH-22176
+    Reason: Backwards compatibility
+    Author: Esteban Gutierrez
+
+commit d4ea1425b970627560b1dd46cc7917cea04e6c4c
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Dec 15 10:40:25 2014 +0000
+
+    CLOUDERA-BUILD Enable support for maven bundles (hadoop-common dependency)
+    
+    Ref: CDH-21268
+    Reason: Product Requirement (Compatibility)
+    Author: Esteban Gutierrez
+
+commit 4eed33198e95b61815f4571219b37170cc963ef5
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Dec 15 10:35:33 2014 +0000
+
+    CLOUDERA-BUILD Add top level Cloudera directory to assembly
+
+commit aa34cddfad3af8217728ce7895cd08673f767a5a
+Author: Matteo Bertozzi <matteo.bertozzi@cloudera.com>
+Date:   Mon Dec 15 10:32:44 2014 +0000
+
+    CLOUDERA-BUILD add safety check to build to ensure JDK7 is being used
+
+commit 37edcd6e12b11ef412b4d60ce61e60d44beafa58
+Author: Huaxiang Sun <hsun@cloudera.com>
+Date:   Wed Dec 2 16:27:47 2015 -0800
+
+    CLOUDERA-BUILD Change build to point to Cloudera versions and repositories.
+    
+    Changes in hbase-resource-bundle/src/main/resources/supplemental-models.xml
+    needs revisit for proper license
+    
+    Change-Id: Icfd1cb16c7f76bb4dcfcd7e7753dc756cbfe14b8
+
+commit cc36e460f2cd99dc723c5bcc330a3e7207f9a612
+Author: Apekshit <apeksharma@gmail.com>
+Date:   Tue Feb 23 15:16:42 2016 -0800
+
+    CLOUDERA-BUILD Compatability revert HBASE-15285.
+    Revert "HBASE-15285 ADDENDUM make RETURN_RESULTS attribute name protected to match branch-1.1 and deprecated to warn of 2.0 (Sean Busbey)"
+    Revert "HBASE-15285 Forward-port respect for isReturnResult from HBASE-15095"
+    
+    This reverts commit d4388ba0101928d1d272b2e88dddfd5203400ee8.
+    This reverts commit e610655e5c622d081a2b7d6fee494159c2d1e179.
