@@ -21,4 +21,28 @@
  */
 -->
 <configuration>
+  <property>
+    <name>hbase.master.port</name>
+    <value>60000</value>
+  </property>
+  <property>
+    <name>hbase.master.info.port</name>
+    <value>60010</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.port</name>
+    <value>60020</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.info.port</name>
+    <value>60030</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>localhost</value>
+  </property>
+  <property>
+    <name>hbase.localcluster.port.ephemeral</name>
+    <value>false</value>
+  </property>
 </configuration>

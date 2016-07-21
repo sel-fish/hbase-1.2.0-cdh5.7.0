@@ -142,10 +142,13 @@ public class LocalHBaseCluster {
 
     // Always have masters and regionservers come up on port '0' so we don't
     // clash over default ports.
-    conf.set(HConstants.MASTER_PORT, "0");
-    conf.set(HConstants.REGIONSERVER_PORT, "0");
-    if (conf.getInt(HConstants.REGIONSERVER_INFO_PORT, 0) != -1) {
-      conf.set(HConstants.REGIONSERVER_INFO_PORT, "0");
+    boolean useEphemeralPort = conf.getBoolean("hbase.localcluster.port.ephemeral", true);
+    if (useEphemeralPort) {
+      conf.set(HConstants.MASTER_PORT, "0");
+      conf.set(HConstants.REGIONSERVER_PORT, "0");
+      if (conf.getInt(HConstants.REGIONSERVER_INFO_PORT, 0) != -1) {
+        conf.set(HConstants.REGIONSERVER_INFO_PORT, "0");
+      }
     }
 
     this.masterClass = (Class<? extends HMaster>)
