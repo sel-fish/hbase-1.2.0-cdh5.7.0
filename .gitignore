@@ -1,2 +1,5 @@
 target
 logs
+tags
+*.iml
+.idea
