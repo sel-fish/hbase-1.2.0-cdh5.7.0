@@ -24,6 +24,8 @@ import java.io.IOException;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.classification.InterfaceStability;
 
+// why this class defined in hbase-client module ..
+// very wield .. right ??
 /**
  * Coprocessor interface.
  */
@@ -44,6 +46,8 @@ public interface Coprocessor {
   /**
    * Lifecycle state of a given coprocessor instance.
    */
+  // processor has the following states ..
+  // only work when in 'ACTIVE' status ??
   enum State {
     UNINSTALLED,
     INSTALLED,

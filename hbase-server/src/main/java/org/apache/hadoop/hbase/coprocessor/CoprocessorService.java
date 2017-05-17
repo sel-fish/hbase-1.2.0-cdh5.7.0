@@ -30,5 +30,6 @@ import org.apache.hadoop.hbase.HBaseInterfaceAudience;
 @InterfaceAudience.LimitedPrivate(HBaseInterfaceAudience.COPROC)
 @InterfaceStability.Evolving
 public interface CoprocessorService {
+  // Service is a structure in defined in protobuf ..
   Service getService();
 }

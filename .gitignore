@@ -3,3 +3,5 @@ logs
 tags
 *.iml
 .idea
+
+.DS_Store

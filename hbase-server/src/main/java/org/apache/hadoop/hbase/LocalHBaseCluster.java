@@ -140,6 +140,10 @@ public class LocalHBaseCluster {
   throws IOException {
     this.conf = conf;
 
+    // that's a configuration i add myself ..
+    // maybe i should trace why we got here ..
+    // the best method to read source code is use btrace or byteman ... for me ..
+
     // Always have masters and regionservers come up on port '0' so we don't
     // clash over default ports.
     boolean useEphemeralPort = conf.getBoolean("hbase.localcluster.port.ephemeral", true);

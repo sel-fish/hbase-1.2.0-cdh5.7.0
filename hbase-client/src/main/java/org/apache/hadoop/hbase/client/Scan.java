@@ -138,6 +138,7 @@ public class Scan extends Query {
   /*
    * -1 means no caching
    */
+  // what happened if no caching ..
   private int caching = -1;
   private long maxResultSize = -1;
   private boolean cacheBlocks = true;
@@ -493,6 +494,15 @@ public class Scan extends Query {
   public void setRowOffsetPerColumnFamily(int offset) {
     this.storeOffset = offset;
   }
+
+  // i want to find out the reason that
+  // when  i want to scan a very huge table
+  // i must set that property ..
+  // otherwise i will get an error like ..
+  // org.apache.hadoop.hbase.exceptions.ConnectionClosingException: Connection to regionserver1/x.x.x.x:60020 is closing. Call id=4, waitTime=32
+  // seems that this config related to "hbase.client.scanner.caching" .. but can't find the default value ..
+  // "hbase.client.scanner.caching" will take effect if set, else use default value : 2147483647 ..
+  // then the question is why it take effect ..
 
   /**
    * Set the number of rows for caching that will be passed to scanners.

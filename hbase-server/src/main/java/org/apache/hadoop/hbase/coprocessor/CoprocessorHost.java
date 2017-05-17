@@ -61,6 +61,9 @@ import org.apache.hadoop.hbase.util.VersionInfo;
 @InterfaceAudience.LimitedPrivate(HBaseInterfaceAudience.COPROC)
 @InterfaceStability.Evolving
 public abstract class CoprocessorHost<E extends CoprocessorEnvironment> {
+  // don't know the meaning of CoprocessorHost and its usage ..
+  // but seems that this abstract class has four subclasses
+  // related to master / region / regionserver / wal
   public static final String REGION_COPROCESSOR_CONF_KEY =
       "hbase.coprocessor.region.classes";
   public static final String REGIONSERVER_COPROCESSOR_CONF_KEY =

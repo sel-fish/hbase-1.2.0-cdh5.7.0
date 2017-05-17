@@ -840,6 +840,9 @@ public class HTable implements HTableInterface, RegionLocator {
       throw new IllegalArgumentException("Small scan should not be used with batching");
     }
 
+    // will invoke setCaching .. omg ..
+    // seems that default value is 2147483647 ..
+    // which is a very big number for me ..
     if (scan.getCaching() <= 0) {
       scan.setCaching(getScannerCaching());
     }
