@@ -501,7 +501,8 @@ public class Scan extends Query {
   // otherwise i will get an error like ..
   // org.apache.hadoop.hbase.exceptions.ConnectionClosingException: Connection to regionserver1/x.x.x.x:60020 is closing. Call id=4, waitTime=32
   // seems that this config related to "hbase.client.scanner.caching" .. but can't find the default value ..
-  // "hbase.client.scanner.caching" will take effect if set, else use default value : 2147483647 ..
+  // HBASE_CLIENT_SCANNER_CACHING "hbase.client.scanner.caching" will take effect if set, else use default value : 2147483647 ..
+  // which is DEFAULT_HBASE_CLIENT_SCANNER_CACHING , Integer.MAX_VALUE
   // then the question is why it take effect ..
 
   /**

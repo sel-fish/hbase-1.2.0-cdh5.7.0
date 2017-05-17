@@ -139,6 +139,8 @@ public class ClientScanner extends AbstractClientScanner {
       // check if application wants to collect scan metrics
       initScanMetrics(scan);
 
+      // that's where we set caching for scanner ..
+      // but how it will effect server side ..
       // Use the caching from the Scan.  If not set, use the default cache setting for this table.
       if (this.scan.getCaching() > 0) {
         this.caching = this.scan.getCaching();
@@ -354,6 +356,7 @@ public class ClientScanner extends AbstractClientScanner {
       scanMetricsPublished = true;
     }
 
+    // that's where to get items from remote ??
     @Override
     public Result next() throws IOException {
       // If the scanner is closed and there's nothing left in the cache, next is a no-op.

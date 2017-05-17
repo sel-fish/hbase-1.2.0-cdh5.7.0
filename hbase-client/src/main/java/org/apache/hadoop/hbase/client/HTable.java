@@ -850,6 +850,15 @@ public class HTable implements HTableInterface, RegionLocator {
       scan.setMaxResultSize(scannerMaxResultSize);
     }
 
+    // here we can see that we have 4 kinds of scanner :
+    // 1. ClientSmallReversedScanner
+    // 2. ReversedClientScanner
+    // 3. ClientSmallScanner
+    // 4. ClientScanner
+
+    // as we didn't set small, neither reverse ..
+    // so we use ClientScanner ..
+
     if (scan.isReversed()) {
       if (scan.isSmall()) {
         return new ClientSmallReversedScanner(getConfiguration(), scan, getName(),
